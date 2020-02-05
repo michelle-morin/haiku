@@ -1,14 +1,3 @@
-//OBJ/Class List
-//Haiku Class
-//this.poem string
-//this.lines []
-//this.vowels []
-//this.syllables = this.vowels.length
-
-//Function List
-//addPoem
-//lineCount
-//wordSplit
 //vowelCount
 //silenSubtract
 //doubleSubtract
@@ -17,11 +6,13 @@ export class Haiku {
   constructor() {
     this.poem = "";
     this.lines = [];
-    this.vowels = [];
+    this.vowelsOne = [];
+    this.vowelsTwo = [];
+    this.vowelsThree = [];
     this.lineOne = [];
     this.lineTwo = [];
     this.lineThree = [];
-    this.syllables = this.vowels.length;
+    this.syllables = [this.vowelsOne.length, this.vowelsTwo.length, this.vowelsThree.length];
   }
 
   addPoem(poem) {
@@ -40,5 +31,9 @@ export class Haiku {
     this.lineOne = firstLine.split(" ");
     this.lineTwo = secondLine.split(" ");
     this.lineThree = thirdLine.split(" ");
+  }
+
+  vowelCount() {
+    
   }
 }

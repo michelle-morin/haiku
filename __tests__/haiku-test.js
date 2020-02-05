@@ -27,7 +27,13 @@ syllables`);
   test('should return an array containing the words of a line of the poem', () => {
     poem.wordSplit();
     expect(poem.lineOne).toEqual([`this`,`doesn't`]);
-    expect(poem.lineTwo).toEqual(["have","enough"]);
+    expect(poem.lineTwo).toEqual(['have','enough']);
     expect(poem.lineThree).toEqual([`syllables`]);
   });
+
+  test('should count total vowels in each word in a line', () => {
+    poem.wordSplit();
+    poem.lineOne.vowelCount();
+    expect(this.syllables[1]).toBe(3)
+  })
 });
