@@ -23,7 +23,8 @@ describe('Haiku', () => {
     expect(notHaiku.lineCount()).toBe(false);
   });
 
-  // test('should return an array containing the words of a line of the poem', () => {
-    
-  // })
+  test('should return an array containing the words of a line of the poem', () => {
+    poem.wordSplit();
+    expect(this.lineOne).toEqual([`this`,`doesn't`]);
+  })
 });

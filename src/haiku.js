@@ -18,6 +18,9 @@ export class Haiku {
     this.poem = "";
     this.lines = [];
     this.vowels = [];
+    this.lineOne = [];
+    this.lineTwo = [];
+    this.lineThree = [];
     this.syllables = this.vowels.length;
   }
 
