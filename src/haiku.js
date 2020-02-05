@@ -1,7 +1,3 @@
-//vowelCount
-//silenSubtract
-//doubleSubtract
-
 export class Haiku {
   constructor() {
     this.poem = "";
@@ -11,6 +7,7 @@ export class Haiku {
     this.lineTwo = [];
     this.lineThree = [];
     this.syllables = [];
+    this.haiku = false;
   }
 
   addPoem(poem) {
@@ -87,5 +84,9 @@ export class Haiku {
       }
     }
      this.poem = charsInPoem.join("");
+   }
+
+   checkHaiku() {
+     
    }
 }

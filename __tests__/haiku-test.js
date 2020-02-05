@@ -74,4 +74,17 @@ refridgerator`);
     expect(poem2.syllables[2]).toBe(5);
   });
 
+  test('should determine whether poem is a haiku', () => {
+    let poem2 = new Haiku();
+    poem2.addPoem( `yeellow is my new
+favorite color to see
+refridgerator`);
+    poem2.doubleVowelRemover();
+    poem2.lineCount();
+    poem2.wordSplit();
+    poem2.silentVowelRemover();
+    poem2.vowelCount();
+    poem2.checkHaiku();
+    expect(poem2.haiku).toBe(true);
+  });
 });
