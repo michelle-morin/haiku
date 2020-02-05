@@ -78,5 +78,14 @@ export class Haiku {
     this.lines[2] = this.lineThree.join(" ");
    }
 
-
+   doubleVowelRemover() {
+     let regVowels = ["a", "i", "e", "o", "u"];
+     let charsInPoem = this.poem.split("");
+     for (let i=0; i<charsInPoem.length; i++) {
+       if (regVowels.includes(charsInPoem[i]) && regVowels.includes(charsInPoem[i+1])) {
+        charsInPoem.splice(i, 1);
+      }
+    }
+     this.poem = charsInPoem.join("");
+   }
 }
