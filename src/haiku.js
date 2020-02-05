@@ -87,6 +87,8 @@ export class Haiku {
    }
 
    checkHaiku() {
-     
+     if (this.syllables[0] === 5 && this.syllables[1] === 7 && this.syllables[2] === 5) {
+       this.haiku = true;
+     }
    }
 }
