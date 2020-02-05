@@ -70,6 +70,8 @@ refridgerator`);
     poem2.silentVowelRemover();
     poem2.vowelCount();
     expect(poem2.syllables[0]).toBe(5);
+    expect(poem2.syllables[1]).toBe(7);
+    expect(poem2.syllables[2]).toBe(5);
   });
 
 });
