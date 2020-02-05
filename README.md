@@ -17,8 +17,8 @@ _This application checks whether a poem is a haiku._
 | Determines that poem is not haiku if poem does not have exactly 3 lines | poem with 4 lines | "not a haiku" | 
 | Break each line of poem into individual words | line of poem | array of individual words as each element |
 | Count total vowels in each line | Word array | Vowel Count |
-| Subtract all silent vowels | (word)e | Vowel Count - 1 |
-| Subtract one vowel for all double vowels | woord | Vowel Count - 1 |
+| Subtract all silent vowels | (word)e, y(ellow) | 1, 2 |
+| Replace one vowel with "x" for all double vowels | woord | woxrd |
 | Use count to determine number of syllables in each line | Vowel Count = 2 | Syllables = 2 |
 | Returns whether Poem is a Haiku | 5,7,5 syllables | True |
 
@@ -50,6 +50,10 @@ _Next, install npm at the project's root directory_
 * _Enter the command "npm run build"_
 
 _Open the contents of the directory in a text editor or IDE of your choice (e.g., to open the contents of the directory in Visual Studio Code, enter the command "code ." in the Terminal)._
+
+## Known Bugs
+
+_Does not currently account for edge cases like poem, ion, eon, etc. in which the double vowel forms two syllables._
 
 ## Technologies Used
 
