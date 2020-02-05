@@ -38,7 +38,10 @@ syllables`);
 
   test('should reduce vowel count by 1 for words ending in e', ()  => {
     poem.wordSplit();
+    poem.vowelCount();
     poem.silentVowelRemover();
+    expect(poem.syllables[0]).toBe(3);
     expect(poem.syllables[1]).toBe(4);
+    expect(poem.syllables[2]).toBe(3);
   });
 });

@@ -47,6 +47,21 @@ export class Haiku {
   }
 
   silentVowelRemover() {
-
+    let that = this;
+    this.lineOne.forEach(function(word) {
+      if (word.charAt(word.length-1) === "e") {
+        that.syllables[0] -= 1;
+      }
+    });
+    this.lineTwo.forEach(function(word) {
+      if (word.charAt(word.length-1) === "e") {
+        that.syllables[1] -= 1;
+      }
+    });
+    this.lineThree.forEach(function(word) {
+      if (word.charAt(word.length-1) === "e") {
+        that.syllables[2] -= 1;
+      }
+    });
   }
 }
