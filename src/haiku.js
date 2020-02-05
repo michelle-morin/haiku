@@ -37,14 +37,16 @@ export class Haiku {
       let alphVowels = ["a", "i", "e", "o", "u", "y"];
       let that = this;
       charsInLine.forEach(function(char) {
-        // console.log("vowels inside forEach statement:" + that.vowels);
         if (alphVowels.includes(char)) {
           that.vowels.push(char);
         }
       });
       this.syllables.push(this.vowels.length);
-      console.log("syllables:" + this.syllables);
       this.vowels.splice(0);
     }
+  }
+
+  silentVowelRemover() {
+
   }
 }
