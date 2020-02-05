@@ -25,6 +25,6 @@ describe('Haiku', () => {
 
   test('should return an array containing the words of a line of the poem', () => {
     poem.wordSplit();
-    expect(this.lineOne).toEqual([`this`,`doesn't`]);
-  })
+    expect(poem.lineOne).toEqual([`this`,`doesn't`]);
+  });
 });
