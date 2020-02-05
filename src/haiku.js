@@ -8,7 +8,6 @@
 //Function List
 //addPoem
 //lineCount
-//lineSplit
 //wordSplit
 //vowelCount
 //silenSubtract
@@ -28,5 +27,12 @@ export class Haiku {
 
   lineCount() {
     this.lines = this.poem.split("\n");
+    if (this.lines.length != 3) {
+      return false;
+    }
+  }
+
+  wordSplit() {
+
   }
 }
