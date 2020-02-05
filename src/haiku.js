@@ -73,22 +73,22 @@ export class Haiku {
     this.lines[0] = this.lineOne.join(" ");
     this.lines[1] = this.lineTwo.join(" ");
     this.lines[2] = this.lineThree.join(" ");
-   }
+  }
 
-   doubleVowelRemover() {
-     let regVowels = ["a", "i", "e", "o", "u"];
-     let charsInPoem = this.poem.split("");
-     for (let i=0; i<charsInPoem.length; i++) {
-       if (regVowels.includes(charsInPoem[i]) && regVowels.includes(charsInPoem[i+1])) {
+  doubleVowelRemover() {
+    let regVowels = ["a", "i", "e", "o", "u"];
+    let charsInPoem = this.poem.split("");
+    for (let i=0; i<charsInPoem.length; i++) {
+      if (regVowels.includes(charsInPoem[i]) && regVowels.includes(charsInPoem[i+1])) {
         charsInPoem.splice(i+1, 1, "x");
       }
     }
-     this.poem = charsInPoem.join("");
-   }
+    this.poem = charsInPoem.join("");
+  }
 
-   checkHaiku() {
-     if (this.syllables[0] === 5 && this.syllables[1] === 7 && this.syllables[2] === 5) {
-       this.haiku = true;
-     }
-   }
+  checkHaiku() {
+    if (this.syllables[0] === 5 && this.syllables[1] === 7 && this.syllables[2] === 5) {
+      this.haiku = true;
+    }
+  }
 }
