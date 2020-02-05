@@ -27,6 +27,6 @@ export class Haiku {
   }
 
   lineCount() {
-    
+    this.lines = this.poem.split("\n");
   }
 }
