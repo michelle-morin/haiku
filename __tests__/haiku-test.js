@@ -62,6 +62,7 @@ refridgerator`);
   test('should decrease vowel count by one for double vowel instances', () => {
     poem.wordSplit();
     poem.silentVowelRemover();
+    poem.doubleVowelRemover();
     poem.vowelCount();
     expect(poem.syllables[0]).toBe(3);
   });
