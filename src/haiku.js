@@ -53,29 +53,25 @@ export class Haiku {
       if (word.charAt(word.length-1) === "e") {
         that.lineOne[i] = word.slice(0, word.length-1);
       }
-      // if (word.charAt(0) === "y") {
-      //   word.split("").shift().join("");
-      // }
+      if (word.charAt(0) === "y") {
+        that.lineOne[i] = word.slice(1);
+      }
     });
     this.lineTwo.forEach(function(word, i) {
       if (word.charAt(word.length-1) === "e") {
-        
-        console.log(that.lineTwo[i]);
-        that.lineTwo[i] = word.slice(0, word.length-1);
-        console.log(that.lineTwo[i]);
-        
+        that.lineTwo[i] = word.slice(0, word.length-1);        
       }
-    //   // if (word.charAt(0) === "y") {
-    //   //   word.split("").shift().join("");
-    //   // }
+      if (word.charAt(0) === "y") {
+        that.lineTwo[i] = word.slice(1);
+      }
     });
     this.lineThree.forEach(function(word, i) {
       if (word.charAt(word.length-1) === "e") {
         that.lineThree[i] = word.slice(0, word.length-1);
       }
-    //   // if (word.charAt(0) === "y") {
-    //   //   word.split("").shift().join("");
-    //   // }
+      if (word.charAt(0) === "y") {
+        that.lineThree[i] = word.slice(1);
+      }
     });
     this.lines[0] = this.lineOne.join(" ");
     this.lines[1] = this.lineTwo.join(" ");
