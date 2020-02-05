@@ -46,33 +46,41 @@ export class Haiku {
     }
   }
 
+
   silentVowelRemover() {
     let that = this;
-    this.lineOne.forEach(function(word) {
+    this.lineOne.forEach(function(word, i) {
       if (word.charAt(word.length-1) === "e") {
-        that.syllables[0] -= 1;
+        that.lineOne[i] = word.slice(0, word.length-1);
       }
-      if (word.charAt(0) === "y") {
-        that.syllables[0] -= 1;
-      }
+      // if (word.charAt(0) === "y") {
+      //   word.split("").shift().join("");
+      // }
     });
-    this.lineTwo.forEach(function(word) {
+    this.lineTwo.forEach(function(word, i) {
       if (word.charAt(word.length-1) === "e") {
-        that.syllables[1] -= 1;
+        
+        console.log(that.lineTwo[i]);
+        that.lineTwo[i] = word.slice(0, word.length-1);
+        console.log(that.lineTwo[i]);
+        
       }
-      if (word.charAt(0) === "y") {
-        that.syllables[1] -= 1;
-      }
+    //   // if (word.charAt(0) === "y") {
+    //   //   word.split("").shift().join("");
+    //   // }
     });
-    this.lineThree.forEach(function(word) {
+    this.lineThree.forEach(function(word, i) {
       if (word.charAt(word.length-1) === "e") {
-        that.syllables[2] -= 1;
+        that.lineThree[i] = word.slice(0, word.length-1);
       }
-      if (word.charAt(0) === "y") {
-        that.syllables[2] -= 1;
-      }
+    //   // if (word.charAt(0) === "y") {
+    //   //   word.split("").shift().join("");
+    //   // }
     });
-  }
+    this.lines[0] = this.lineOne.join(" ");
+    this.lines[1] = this.lineTwo.join(" ");
+    this.lines[2] = this.lineThree.join(" ");
+   }
 
 
 }

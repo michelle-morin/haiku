@@ -38,26 +38,29 @@ syllables`);
 
   test('should reduce vowel count by 1 for words ending in e', ()  => {
     poem.wordSplit();
-    poem.vowelCount();
     poem.silentVowelRemover();
+    poem.vowelCount();
     expect(poem.syllables[0]).toBe(3);
     expect(poem.syllables[1]).toBe(4);
     expect(poem.syllables[2]).toBe(3);
   });
 
-  test('should reduce vowel count by 1 for words starting in y', ()  => {
-    let poem2 = new Haiku();
-    poem2.addPoem( `yellow is my new
-favorite color to see
-refridgerator`);
-    poem2.lineCount();
-    poem2.wordSplit();
-    poem2.vowelCount();
-    poem2.silentVowelRemover();
-    expect(poem2.syllables[0]).toBe(5);
-    expect(poem2.syllables[1]).toBe(7);
-    expect(poem2.syllables[2]).toBe(5);
-  });
+//   test('should reduce vowel count by 1 for words starting in y', ()  => {
+//     let poem2 = new Haiku();
+//     poem2.addPoem( `yellow is my new
+// favorite color to see
+// refridgerator`);
+//     poem2.lineCount();
+//     poem2.wordSplit();
+//     poem2.silentVowelRemover();
+//     poem2.vowelCount();
+//     expect(poem2.syllables[0]).toBe(5);
+//     expect(poem2.syllables[1]).toBe(7);
+//     expect(poem2.syllables[2]).toBe(5);
+//   });
 
+//   test('should decrease vowel count by one for double vowel instances'), () => {
+
+//   }
 
 });
