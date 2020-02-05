@@ -32,8 +32,7 @@ syllables`);
   });
 
   test('should count total vowels in each word in a line', () => {
-    poem.wordSplit();
-    poem.lineOne.vowelCount();
-    expect(this.syllables[1]).toBe(3)
-  })
+    poem.vowelCount();
+    expect(poem.syllables[1]).toBe(5);
+  });
 });

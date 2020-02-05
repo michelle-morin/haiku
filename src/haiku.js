@@ -6,13 +6,11 @@ export class Haiku {
   constructor() {
     this.poem = "";
     this.lines = [];
-    this.vowelsOne = [];
-    this.vowelsTwo = [];
-    this.vowelsThree = [];
+    this.vowels = [];
     this.lineOne = [];
     this.lineTwo = [];
     this.lineThree = [];
-    this.syllables = [this.vowelsOne.length, this.vowelsTwo.length, this.vowelsThree.length];
+    this.syllables = [];
   }
 
   addPoem(poem) {
@@ -34,6 +32,19 @@ export class Haiku {
   }
 
   vowelCount() {
-    
+    for (let i=0; i < 3; i++) {
+      let charsInLine = this.lines[i].split("");
+      let alphVowels = ["a", "i", "e", "o", "u", "y"];
+      let that = this;
+      charsInLine.forEach(function(char) {
+        // console.log("vowels inside forEach statement:" + that.vowels);
+        if (alphVowels.includes(char)) {
+          that.vowels.push(char);
+        }
+      });
+      this.syllables.push(this.vowels.length);
+      console.log("syllables:" + this.syllables);
+      this.vowels.splice(0);
+    }
   }
 }
