@@ -81,6 +81,8 @@ export class Haiku {
     for (let i=0; i<charsInPoem.length; i++) {
       if (regVowels.includes(charsInPoem[i]) && regVowels.includes(charsInPoem[i+1])) {
         charsInPoem.splice(i+1, 1, "x");
+      } else if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === "y") {
+        charsInPoem.splice(i+1, 1, "x");
       }
     }
     this.poem = charsInPoem.join("");
