@@ -16,7 +16,7 @@ _This application checks whether a poem is a haiku._
 | Check to see if the poem has three lines | Poem has three lines | True |
 | Determines that poem is not haiku if poem does not have exactly 3 lines | poem with 4 lines | "not a haiku" | 
 | Break each line of poem into individual words | line of poem | array of individual words as each element |
-| Count total vowels in each word | Word array | Vowel Count |
+| Count total vowels in each line | Word array | Vowel Count |
 | Subtract all silent vowels | (word)e | Vowel Count - 1 |
 | Subtract one vowel for all double vowels | woord | Vowel Count - 1 |
 | Use count to determine number of syllables in each line | Vowel Count = 2 | Syllables = 2 |
