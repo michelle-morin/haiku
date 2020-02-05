@@ -44,4 +44,19 @@ syllables`);
     expect(poem.syllables[1]).toBe(4);
     expect(poem.syllables[2]).toBe(3);
   });
+
+  test('should reduce vowel count by 1 for words starting in y', ()  => {
+    let poem = new Haiku();
+    poem.addPoem( `yellow is my new
+favorite color to see
+refridgerator`)
+    poem.wordSplit();
+    poem.vowelCount();
+    poem.silentVowelRemover();
+    expect(poem.syllables[0]).toBe(3);
+    expect(poem.syllables[1]).toBe(4);
+    expect(poem.syllables[2]).toBe(3);
+  });
+
+
 });
