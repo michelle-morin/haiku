@@ -5,7 +5,7 @@ describe('Haiku', () => {
   beforeEach(() => {
     poem = new Haiku();
     //When poem was tabbed in correctly it created spacing issues in arrays
-    poem.addPoem(`this doesn't
+    poem.addPoem(`this does not
 have enough
 syllables`);
     poem.lineCount();
@@ -26,7 +26,7 @@ syllables`);
 
   test('should return an array containing the words of a line of the poem', () => {
     poem.wordSplit();
-    expect(poem.lineOne).toEqual([`this`,`doesn't`]);
+    expect(poem.lineOne).toEqual([`this`,`does`,`not`]);
     expect(poem.lineTwo).toEqual(['have','enough']);
     expect(poem.lineThree).toEqual([`syllables`]);
   });
@@ -40,7 +40,7 @@ syllables`);
     poem.wordSplit();
     poem.silentVowelRemover();
     poem.vowelCount();
-    expect(poem.syllables[0]).toBe(3);
+    expect(poem.syllables[0]).toBe(4);
     expect(poem.syllables[1]).toBe(4);
     expect(poem.syllables[2]).toBe(3);
   });
@@ -59,8 +59,11 @@ refridgerator`);
     expect(poem2.syllables[2]).toBe(5);
   });
 
-//   test('should decrease vowel count by one for double vowel instances'), () => {
-
-//   }
+  test('should decrease vowel count by one for double vowel instances', () => {
+    poem.wordSplit();
+    poem.silentVowelRemover();
+    poem.vowelCount();
+    expect(poem.syllables[0]).toBe(3);
+  });
 
 });
