@@ -47,7 +47,7 @@ export class Haiku {
   silentVowelRemover() {
     let that = this;
     this.lineOne.forEach(function(word, i) {
-      if (word.charAt(word.length-1) === "e") {
+      if (word != "the" && word != "she" && word.length != 2 && word.charAt(word.length-1) === "e") {
         that.lineOne[i] = word.slice(0, word.length-1);
       }
       if (word.charAt(0) === "y") {
@@ -55,7 +55,7 @@ export class Haiku {
       }
     });
     this.lineTwo.forEach(function(word, i) {
-      if (word.charAt(word.length-1) === "e") {
+      if (word != "the" && word != "she" && word.length != 2 && word.charAt(word.length-1) === "e") {
         that.lineTwo[i] = word.slice(0, word.length-1);        
       }
       if (word.charAt(0) === "y") {
@@ -63,7 +63,7 @@ export class Haiku {
       }
     });
     this.lineThree.forEach(function(word, i) {
-      if (word.charAt(word.length-1) === "e") {
+      if (word != "the" && word != "she" && word.length != 2 && word.charAt(word.length-1) === "e") {
         that.lineThree[i] = word.slice(0, word.length-1);
       }
       if (word.charAt(0) === "y") {
