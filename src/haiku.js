@@ -52,9 +52,15 @@ export class Haiku {
       if (word.charAt(word.length-1) === "e") {
         that.syllables[0] -= 1;
       }
+      if (word.charAt(0) === "y") {
+        that.syllables[0] -= 1;
+      }
     });
     this.lineTwo.forEach(function(word) {
       if (word.charAt(word.length-1) === "e") {
+        that.syllables[1] -= 1;
+      }
+      if (word.charAt(0) === "y") {
         that.syllables[1] -= 1;
       }
     });
@@ -62,6 +68,11 @@ export class Haiku {
       if (word.charAt(word.length-1) === "e") {
         that.syllables[2] -= 1;
       }
+      if (word.charAt(0) === "y") {
+        that.syllables[2] -= 1;
+      }
     });
   }
+
+
 }
