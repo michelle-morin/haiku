@@ -38,5 +38,7 @@ export class Haiku {
   wordSplit() {
     const [firstLine, secondLine, thirdLine] = this.lines;
     this.lineOne = firstLine.split(" ");
+    this.lineTwo = secondLine.split(" ");
+    this.lineThree = thirdLine.split(" ");
   }
 }

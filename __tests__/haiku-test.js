@@ -4,9 +4,10 @@ describe('Haiku', () => {
   let poem;
   beforeEach(() => {
     poem = new Haiku();
+    //When poem was tabbed in correctly it created spacing issues in arrays
     poem.addPoem(`this doesn't
-    have enough
-    syllables`);
+have enough
+syllables`);
     poem.lineCount();
   });
 
@@ -26,5 +27,7 @@ describe('Haiku', () => {
   test('should return an array containing the words of a line of the poem', () => {
     poem.wordSplit();
     expect(poem.lineOne).toEqual([`this`,`doesn't`]);
+    expect(poem.lineTwo).toEqual(["have","enough"]);
+    expect(poem.lineThree).toEqual([`syllables`]);
   });
 });
