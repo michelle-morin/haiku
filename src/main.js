@@ -11,6 +11,7 @@ $(document).ready(function() {
     let userPoem = new Haiku();
     userPoem.addPoem(inputPoem);
     userPoem.poem = userPoem.poem.toLowerCase();
+    userPoem.wordReplacer();
     userPoem.doubleVowelRemover();
     let linecount = userPoem.lineCount();
     if (linecount === false) {
