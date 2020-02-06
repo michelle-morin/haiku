@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 function showPoemResult() {
+  $(".jumbotron").hide();
   $("form").hide();
   $(".output").show();
 }
@@ -32,6 +33,7 @@ $(document).ready(function() {
         $("body").addClass("bonsai");
       } else {
         $(".result").html("Not a haiku!");
+        $("body").addClass("failure");
       }
     }
   });
