@@ -29,7 +29,7 @@ $(document).ready(function() {
       userPoem.checkHaiku();
       if (userPoem.haiku === true) {
         $(".result").html("It's a haiku!");
-        $(".flexy").prepend("<img src='' alt='A photo of a bonsai tree'>");
+        $("body").addClass("bonsai");
       } else {
         $(".result").html("Not a haiku!");
       }

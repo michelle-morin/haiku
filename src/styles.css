@@ -13,6 +13,13 @@ body {
   flex-direction: column;
 }
 
+.bonsai {
+  background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pd31-016-eye.jpg?auto=format&bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1600&s=e17db7b16eda28aca4d19b2e0933eba7");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 a {
   color: lightseagreen;
   font-size: large;
