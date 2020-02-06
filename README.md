@@ -14,7 +14,8 @@ _This application checks whether a poem is a haiku._
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| -------------------:|
 | Check to see if the poem has three lines | Poem has three lines | True |
-| Determines that poem is not haiku if poem does not have exactly 3 lines | poem with 4 lines | "not a haiku" | 
+| Determines that poem is not haiku if poem does not have exactly 3 lines | poem with 4 lines | "not a haiku" |
+| Finds instances of specific strings and replaces the strings with xoxox to maintain correct syllable count | creator | xoxoxor | 
 | Break each line of poem into individual words | line of poem | array of individual words as each element |
 | Subtract all silent vowels | (word)e, y(ellow) | 1, 2 |
 | Replace one vowel with "x" for specific double vowel instances | woord | woxrd |
@@ -38,6 +39,10 @@ _Install Git with the following command:_
 _Next, install Node.js by entering the following command in Terminal:_
 * $ brew install node
 
+###### For Windows:
+_Please visit the [Node.js website](https://nodejs.org/en/download/) for installation instructions._
+
+
 #### Install this application
 
 _Clone this repository via Terminal:_
@@ -54,7 +59,7 @@ _Open the contents of the directory in a text editor or IDE of your choice (e.g.
 
 ## Known Bugs
 
-_Does not currently account for certain edge cases. One edge case not currently supported is the double vowel "ea", which sometimes forms a single syllable (e.g., treat) and sometimes forms a double syllable (e.g., create). Another word not currently recognized by its correct syllable count is "poem"._
+_The wordReplacer function currently handles select edge cases, but can be expanded to handle additional. Please submit a pull request if you find another edge case to add!_
 
 ## Technologies Used
 
