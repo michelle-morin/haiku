@@ -87,4 +87,18 @@ refridgerator`);
     poem2.checkHaiku();
     expect(poem2.haiku).toBe(true);
   });
+
+  test('should account for io and eo scenarios in which each vowel forms a syllable', () => {
+    let poem2 = new Haiku();
+    poem2.addPoem( `if you are not sure
+if it is a true ion
+we will check for you`);
+    poem2.doubleVowelRemover();
+    poem2.lineCount();
+    poem2.wordSplit();
+    poem2.silentVowelRemover();
+    poem2.vowelCount();
+    poem2.checkHaiku();
+    expect(poem2.haiku).toBe(true);
+  })
 });

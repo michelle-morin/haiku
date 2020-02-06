@@ -78,13 +78,23 @@ export class Haiku {
     let regVowels = ["a", "i", "e", "o", "u"];
     let charsInPoem = this.poem.split("");
     for (let i=0; i<charsInPoem.length; i++) {
-      if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === charsInPoem[i]) {
-        charsInPoem.splice(i+1, 1, "x");
-      } else if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === "y") {
+      // if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === charsInPoem[i]) {
+      //   charsInPoem.splice(i+1, 1, "x");
+      // }
+      if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === "y") {
         charsInPoem.splice(i+1, 1, "x");
       }
+      if (charsInPoem[i] === "e" && charsInPoem[i+1] === "o") {
+        charsInPoem.splice(i+1, 0, "x");
+      }
+      if (charsInPoem[i] === "i" && charsInPoem[i+1] === "o") {
+        charsInPoem.splice(i+1, 0, "x");
+      }
+      if (regVowels.includes(charsInPoem[i]) && regVowels.includes(charsInPoem[i+1])) {
+        charsInPoem.splice(i+1, 1, "x");
+      } 
+      this.poem = charsInPoem.join("");
     }
-    this.poem = charsInPoem.join("");
   }
 
   checkHaiku() {
