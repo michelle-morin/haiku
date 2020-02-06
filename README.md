@@ -53,7 +53,7 @@ _Open the contents of the directory in a text editor or IDE of your choice (e.g.
 
 ## Known Bugs
 
-_Does not currently account for edge cases like poem, ion, eon, etc. in which the double vowel forms two syllables._
+_Does not currently account for certain edge cases. One edge case not currently supported is double vowel occurrences in which both vowels form syllables, such as creator, poem, ion, and eon._
 
 ## Technologies Used
 
