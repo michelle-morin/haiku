@@ -104,9 +104,13 @@ export class Haiku {
   }
 
   wordReplacer() {
-    const wordsToReplace = [/creat/g, /poem/g, /hiat/g, /viol/g, /poeia/g];
-    for (var i=0; i<wordsToReplace.length; i++) {
-      this.poem = this.poem.replace(wordsToReplace[i], "xoxox");
+    const onesToReplace = [/ueue/g];
+    for (var i=0; i<onesToReplace.length; i++) {
+      this.poem = this.poem.replace(onesToReplace[i], "xox");
+    }
+    const twosToReplace = [/creat/g, /poem/g, /hiat/g, /viol/g, /poeia/g];
+    for (i=0; i<twosToReplace.length; i++) {
+      this.poem = this.poem.replace(twosToReplace[i], "xoxox");
     }
   }
 
