@@ -10,14 +10,15 @@ $(document).ready(function() {
     let inputPoem = document.getElementById("user-poem").value;
     let userPoem = new Haiku();
     userPoem.addPoem(inputPoem);
+    userPoem.poem = userPoem.poem.toLowerCase();
     userPoem.doubleVowelRemover();
     let linecount = userPoem.lineCount();
-    userPoem.wordSplit();
-    userPoem.silentVowelRemover();
-    userPoem.vowelCount();
     if (linecount === false) {
       $(".output").html("Not a haiku");
     } else {
+      userPoem.wordSplit();
+      userPoem.silentVowelRemover();
+      userPoem.vowelCount();
       userPoem.checkHaiku();
       if (userPoem.haiku === true) {
         $(".output").html("Haiku!");
