@@ -78,26 +78,33 @@ export class Haiku {
     let regVowels = ["a", "i", "e", "o", "u"];
     let charsInPoem = this.poem.split("");
     for (let i=0; i<charsInPoem.length; i++) {
-      // if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === charsInPoem[i]) {
-      //   charsInPoem.splice(i+1, 1, "x");
-      // }
+      if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === charsInPoem[i]) {
+        charsInPoem.splice(i+1, 1, "x");
+      }
       if (regVowels.includes(charsInPoem[i]) && charsInPoem[i+1] === "y") {
         charsInPoem.splice(i+1, 1, "x");
       }
-      if (charsInPoem[i] === "e" && charsInPoem[i+1] === "o") {
+      if (charsInPoem[i+1] === "o" && (charsInPoem[i] === "e" || charsInPoem[i] === "i")) {
         charsInPoem.splice(i+1, 0, "x");
       }
-      if (charsInPoem[i] === "i" && charsInPoem[i+1] === "o") {
-        charsInPoem.splice(i+1, 0, "x");
-      }
-      if (regVowels.includes(charsInPoem[i]) && regVowels.includes(charsInPoem[i+1])) {
+      if (charsInPoem[i] === "a" && (charsInPoem[i+1] === "i" || charsInPoem[i+1] === "u")) {
         charsInPoem.splice(i+1, 1, "x");
-      } 
+      }
+      if (charsInPoem[i] === "e" && (charsInPoem[i+1] === "a" || charsInPoem[i+1] === "i")) {
+        charsInPoem.splice(i+1, 1, "x");
+      }
+      if (charsInPoem[i+1] === "e" && (charsInPoem[i] === "i" || charsInPoem[i] === "u")) {
+        charsInPoem.splice(i+1, 1, "x");
+      }
+      if (charsInPoem[i] === "o" && (charsInPoem[i+1] === "e" || charsInPoem[i+1] === "i" || charsInPoem[i+1] === "u")) {
+        charsInPoem.splice(i+1, 1, "x");
+      }
       this.poem = charsInPoem.join("");
     }
   }
 
   checkHaiku() {
+    console.log(this.syllables);
     if (this.syllables[0] === 5 && this.syllables[1] === 7 && this.syllables[2] === 5) {
       this.haiku = true;
     }
