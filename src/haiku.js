@@ -104,7 +104,7 @@ export class Haiku {
   }
 
   wordReplacer() {
-    const wordsToReplace = [/creat/g, /poem/g];
+    const wordsToReplace = [/creat/g, /poem/g, /hiat/g, /viol/g];
     for (var i=0; i<wordsToReplace.length; i++) {
       this.poem = this.poem.replace(wordsToReplace[i], "xoxox");
     }
