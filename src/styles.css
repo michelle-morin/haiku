@@ -4,6 +4,28 @@ body {
   color: #111111;
 }
 
+.output {
+  display: none;
+}
+
+.flexy {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: lightseagreen;
+  font-size: large;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+a:hover {
+  cursor: pointer;
+  font-style: italic;
+  color: #111111;
+}
+
 .jumbotron {
   display: flex;
   justify-content: flex-end;
@@ -23,14 +45,14 @@ textarea {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border: 2px solid seagreen;
+  border: 2px solid #111111;
   resize: none;
   padding: 2%;
 }
 
 label {
   font-size: xx-large;
-  color: seagreen;
+  color: #111111;
 }
 
 button.btn {
