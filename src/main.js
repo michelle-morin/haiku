@@ -4,9 +4,15 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
+function showPoemResult() {
+  $("form").hide();
+  $(".output").show();
+}
+
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
+    showPoemResult();
     let inputPoem = document.getElementById("user-poem").value;
     let userPoem = new Haiku();
     userPoem.addPoem(inputPoem);
@@ -15,16 +21,17 @@ $(document).ready(function() {
     userPoem.doubleVowelRemover();
     let linecount = userPoem.lineCount();
     if (linecount === false) {
-      $(".output").html("Not a haiku");
+      $(".result").html("Haikus have three lines, silly.");
     } else {
       userPoem.wordSplit();
       userPoem.silentVowelRemover();
       userPoem.vowelCount();
       userPoem.checkHaiku();
       if (userPoem.haiku === true) {
-        $(".output").html("Haiku!");
+        $(".result").html("It's a haiku!");
+        $(".flexy").prepend("<img src='' alt='A photo of a bonsai tree'>");
       } else {
-        $(".output").html("Not a haiku!");
+        $(".result").html("Not a haiku!");
       }
     }
   });
