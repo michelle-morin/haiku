@@ -43,7 +43,6 @@ export class Haiku {
     }
   }
 
-
   silentVowelRemover() {
     let that = this;
     this.lineOne.forEach(function(word, i) {
