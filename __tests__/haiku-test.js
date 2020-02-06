@@ -100,5 +100,16 @@ we will check for you`);
     poem2.vowelCount();
     poem2.checkHaiku();
     expect(poem2.haiku).toBe(true);
-  })
+  });
+
+  test('should replace specific two-syllable words with a two-syllable standin word to account for the doublevowelremover function', () => {
+    let poem3  = new Haiku();
+    poem3.addPoem(`create creator
+this is a poem about
+our function working`);
+    poem3.wordReplacer();
+    expect(poem3.poem).toBe(`xoxoxe xoxoxor
+this is a xoxox about
+our function working`);
+  });
 });
