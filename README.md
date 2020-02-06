@@ -16,9 +16,10 @@ _This application checks whether a poem is a haiku._
 | Check to see if the poem has three lines | Poem has three lines | True |
 | Determines that poem is not haiku if poem does not have exactly 3 lines | poem with 4 lines | "not a haiku" | 
 | Break each line of poem into individual words | line of poem | array of individual words as each element |
-| Count total vowels in each line | Word array | Vowel Count |
 | Subtract all silent vowels | (word)e, y(ellow) | 1, 2 |
-| Replace one vowel with "x" for all double vowels | woord | woxrd |
+| Replace one vowel with "x" for specific double vowel instances | woord | woxrd |
+| Insert one consonant ("x") between certain vowel combinations ("io" and "eo") to consider each vowel as a syllable | ion | ixon |
+| Count total vowels in each line | Word array | Vowel Count |
 | Use count to determine number of syllables in each line | Vowel Count = 2 | Syllables = 2 |
 | Returns whether Poem is a Haiku | 5,7,5 syllables | True |
 
@@ -53,7 +54,7 @@ _Open the contents of the directory in a text editor or IDE of your choice (e.g.
 
 ## Known Bugs
 
-_Does not currently account for certain edge cases. One edge case not currently supported is double vowel occurrences in which both vowels form syllables, such as creator, poem, ion, and eon._
+_Does not currently account for certain edge cases. One edge case not currently supported is the double vowel "ea", which sometimes forms a single syllable (e.g., treat) and sometimes forms a double syllable (e.g., create). Another word not currently recognized by its correct syllable count is "poem"._
 
 ## Technologies Used
 
